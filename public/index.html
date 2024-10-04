@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Certificates</title>
+  <script src="certificate.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- Include jsPDF -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <h1>Search for Team and Generate Certificates</h1>
+
+  <input type="text" id="teamIDInput" placeholder="Enter Team ID">
+  <button onclick="searchTeam()">Search</button>
+
+  <table id="teamTable" border="1">
+    <thead>
+      <tr>
+        <th>Team ID</th>
+        <th>Team Name</th>
+        <th>LeaderName</th>
+        <th>Member Name</th>
+        <th>Certificate Link</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+</html>
