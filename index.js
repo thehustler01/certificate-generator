@@ -12,8 +12,15 @@ app.use(cors());
 app.use(express.static('public'));
 
 // Define a route to serve index.html
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    // res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    const teamID = req.query.teamID; 
+    const memberName = req.query.member;
+    res.send(`Team ID: ${teamID}, Member Name: ${memberName}`);
+    // res.send(generateCertificate(teamID, memberName));
 });
 
 // Define a sample route
