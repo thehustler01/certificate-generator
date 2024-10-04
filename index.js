@@ -19,7 +19,8 @@ app.get('/', (req, res) => {
     // res.sendFile(path.join(__dirname, 'public', 'index.html'));
     const teamID = req.query.teamID; 
     const memberName = req.query.member;
-    res.send(`Team ID: ${teamID}, Member Name: ${memberName}`);
+    // res.send(`Team ID: ${teamID}, Member Name: ${memberName}`);
+    res.json({ teamID: teamID, memberName: memberName });
     // res.send(generateCertificate(teamID, memberName));
 });
 
